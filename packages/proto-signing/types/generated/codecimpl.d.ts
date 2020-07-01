@@ -1,1489 +1,1963 @@
 import * as $protobuf from "protobufjs";
-/** Namespace cosmos_sdk. */
-export namespace cosmos_sdk {
-  /** Namespace x. */
-  namespace x {
-    /** Namespace bank. */
-    namespace bank {
-      /** Namespace v1. */
-      namespace v1 {
-        /** Properties of a MsgSend. */
-        interface IMsgSend {
-          /** MsgSend fromAddress */
-          fromAddress?: Uint8Array | null;
+/** Namespace cosmos. */
+export namespace cosmos {
+  /** Properties of a Coin. */
+  interface ICoin {
+    /** Coin denom */
+    denom?: string | null;
 
-          /** MsgSend toAddress */
-          toAddress?: Uint8Array | null;
-
-          /** MsgSend amount */
-          amount?: cosmos_sdk.v1.ICoin[] | null;
-        }
-
-        /** Represents a MsgSend. */
-        class MsgSend implements IMsgSend {
-          /**
-           * Constructs a new MsgSend.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.x.bank.v1.IMsgSend);
-
-          /** MsgSend fromAddress. */
-          public fromAddress: Uint8Array;
-
-          /** MsgSend toAddress. */
-          public toAddress: Uint8Array;
-
-          /** MsgSend amount. */
-          public amount: cosmos_sdk.v1.ICoin[];
-
-          /**
-           * Creates a new MsgSend instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns MsgSend instance
-           */
-          public static create(properties?: cosmos_sdk.x.bank.v1.IMsgSend): cosmos_sdk.x.bank.v1.MsgSend;
-
-          /**
-           * Encodes the specified MsgSend message. Does not implicitly {@link cosmos_sdk.x.bank.v1.MsgSend.verify|verify} messages.
-           * @param m MsgSend message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.x.bank.v1.IMsgSend, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes a MsgSend message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns MsgSend
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.x.bank.v1.MsgSend;
-        }
-
-        /** Properties of an Input. */
-        interface IInput {
-          /** Input address */
-          address?: Uint8Array | null;
-
-          /** Input coins */
-          coins?: cosmos_sdk.v1.ICoin[] | null;
-        }
-
-        /** Represents an Input. */
-        class Input implements IInput {
-          /**
-           * Constructs a new Input.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.x.bank.v1.IInput);
-
-          /** Input address. */
-          public address: Uint8Array;
-
-          /** Input coins. */
-          public coins: cosmos_sdk.v1.ICoin[];
-
-          /**
-           * Creates a new Input instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns Input instance
-           */
-          public static create(properties?: cosmos_sdk.x.bank.v1.IInput): cosmos_sdk.x.bank.v1.Input;
-
-          /**
-           * Encodes the specified Input message. Does not implicitly {@link cosmos_sdk.x.bank.v1.Input.verify|verify} messages.
-           * @param m Input message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.x.bank.v1.IInput, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes an Input message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns Input
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.x.bank.v1.Input;
-        }
-
-        /** Properties of an Output. */
-        interface IOutput {
-          /** Output address */
-          address?: Uint8Array | null;
-
-          /** Output coins */
-          coins?: cosmos_sdk.v1.ICoin[] | null;
-        }
-
-        /** Represents an Output. */
-        class Output implements IOutput {
-          /**
-           * Constructs a new Output.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.x.bank.v1.IOutput);
-
-          /** Output address. */
-          public address: Uint8Array;
-
-          /** Output coins. */
-          public coins: cosmos_sdk.v1.ICoin[];
-
-          /**
-           * Creates a new Output instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns Output instance
-           */
-          public static create(properties?: cosmos_sdk.x.bank.v1.IOutput): cosmos_sdk.x.bank.v1.Output;
-
-          /**
-           * Encodes the specified Output message. Does not implicitly {@link cosmos_sdk.x.bank.v1.Output.verify|verify} messages.
-           * @param m Output message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.x.bank.v1.IOutput, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes an Output message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns Output
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.x.bank.v1.Output;
-        }
-
-        /** Properties of a MsgMultiSend. */
-        interface IMsgMultiSend {
-          /** MsgMultiSend inputs */
-          inputs?: cosmos_sdk.x.bank.v1.IInput[] | null;
-
-          /** MsgMultiSend outputs */
-          outputs?: cosmos_sdk.x.bank.v1.IOutput[] | null;
-        }
-
-        /** Represents a MsgMultiSend. */
-        class MsgMultiSend implements IMsgMultiSend {
-          /**
-           * Constructs a new MsgMultiSend.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.x.bank.v1.IMsgMultiSend);
-
-          /** MsgMultiSend inputs. */
-          public inputs: cosmos_sdk.x.bank.v1.IInput[];
-
-          /** MsgMultiSend outputs. */
-          public outputs: cosmos_sdk.x.bank.v1.IOutput[];
-
-          /**
-           * Creates a new MsgMultiSend instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns MsgMultiSend instance
-           */
-          public static create(
-            properties?: cosmos_sdk.x.bank.v1.IMsgMultiSend,
-          ): cosmos_sdk.x.bank.v1.MsgMultiSend;
-
-          /**
-           * Encodes the specified MsgMultiSend message. Does not implicitly {@link cosmos_sdk.x.bank.v1.MsgMultiSend.verify|verify} messages.
-           * @param m MsgMultiSend message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.x.bank.v1.IMsgMultiSend, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes a MsgMultiSend message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns MsgMultiSend
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(
-            r: $protobuf.Reader | Uint8Array,
-            l?: number,
-          ): cosmos_sdk.x.bank.v1.MsgMultiSend;
-        }
-
-        /** Properties of a Supply. */
-        interface ISupply {
-          /** Supply total */
-          total?: cosmos_sdk.v1.ICoin[] | null;
-        }
-
-        /** Represents a Supply. */
-        class Supply implements ISupply {
-          /**
-           * Constructs a new Supply.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.x.bank.v1.ISupply);
-
-          /** Supply total. */
-          public total: cosmos_sdk.v1.ICoin[];
-
-          /**
-           * Creates a new Supply instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns Supply instance
-           */
-          public static create(properties?: cosmos_sdk.x.bank.v1.ISupply): cosmos_sdk.x.bank.v1.Supply;
-
-          /**
-           * Encodes the specified Supply message. Does not implicitly {@link cosmos_sdk.x.bank.v1.Supply.verify|verify} messages.
-           * @param m Supply message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.x.bank.v1.ISupply, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes a Supply message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns Supply
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.x.bank.v1.Supply;
-        }
-      }
-    }
+    /** Coin amount */
+    amount?: string | null;
   }
 
-  /** Namespace v1. */
-  namespace v1 {
-    /** Properties of a Coin. */
-    interface ICoin {
-      /** Coin denom */
-      denom?: string | null;
-
-      /** Coin amount */
-      amount?: string | null;
-    }
-
-    /** Represents a Coin. */
-    class Coin implements ICoin {
-      /**
-       * Constructs a new Coin.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.ICoin);
-
-      /** Coin denom. */
-      public denom: string;
-
-      /** Coin amount. */
-      public amount: string;
-
-      /**
-       * Creates a new Coin instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns Coin instance
-       */
-      public static create(properties?: cosmos_sdk.v1.ICoin): cosmos_sdk.v1.Coin;
-
-      /**
-       * Encodes the specified Coin message. Does not implicitly {@link cosmos_sdk.v1.Coin.verify|verify} messages.
-       * @param m Coin message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.ICoin, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a Coin message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns Coin
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.Coin;
-    }
-
-    /** Properties of a DecCoin. */
-    interface IDecCoin {
-      /** DecCoin denom */
-      denom?: string | null;
-
-      /** DecCoin amount */
-      amount?: string | null;
-    }
-
-    /** Represents a DecCoin. */
-    class DecCoin implements IDecCoin {
-      /**
-       * Constructs a new DecCoin.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IDecCoin);
-
-      /** DecCoin denom. */
-      public denom: string;
-
-      /** DecCoin amount. */
-      public amount: string;
-
-      /**
-       * Creates a new DecCoin instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns DecCoin instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IDecCoin): cosmos_sdk.v1.DecCoin;
-
-      /**
-       * Encodes the specified DecCoin message. Does not implicitly {@link cosmos_sdk.v1.DecCoin.verify|verify} messages.
-       * @param m DecCoin message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IDecCoin, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a DecCoin message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns DecCoin
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.DecCoin;
-    }
-
-    /** Properties of an IntProto. */
-    interface IIntProto {
-      /** IntProto int */
-      int?: string | null;
-    }
-
-    /** Represents an IntProto. */
-    class IntProto implements IIntProto {
-      /**
-       * Constructs a new IntProto.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IIntProto);
-
-      /** IntProto int. */
-      public int: string;
-
-      /**
-       * Creates a new IntProto instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns IntProto instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IIntProto): cosmos_sdk.v1.IntProto;
-
-      /**
-       * Encodes the specified IntProto message. Does not implicitly {@link cosmos_sdk.v1.IntProto.verify|verify} messages.
-       * @param m IntProto message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IIntProto, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes an IntProto message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns IntProto
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.IntProto;
-    }
-
-    /** Properties of a DecProto. */
-    interface IDecProto {
-      /** DecProto dec */
-      dec?: string | null;
-    }
-
-    /** Represents a DecProto. */
-    class DecProto implements IDecProto {
-      /**
-       * Constructs a new DecProto.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IDecProto);
-
-      /** DecProto dec. */
-      public dec: string;
-
-      /**
-       * Creates a new DecProto instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns DecProto instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IDecProto): cosmos_sdk.v1.DecProto;
-
-      /**
-       * Encodes the specified DecProto message. Does not implicitly {@link cosmos_sdk.v1.DecProto.verify|verify} messages.
-       * @param m DecProto message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IDecProto, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a DecProto message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns DecProto
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.DecProto;
-    }
-
-    /** Properties of a ValAddresses. */
-    interface IValAddresses {
-      /** ValAddresses addresses */
-      addresses?: Uint8Array[] | null;
-    }
-
-    /** Represents a ValAddresses. */
-    class ValAddresses implements IValAddresses {
-      /**
-       * Constructs a new ValAddresses.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IValAddresses);
-
-      /** ValAddresses addresses. */
-      public addresses: Uint8Array[];
-
-      /**
-       * Creates a new ValAddresses instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns ValAddresses instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IValAddresses): cosmos_sdk.v1.ValAddresses;
-
-      /**
-       * Encodes the specified ValAddresses message. Does not implicitly {@link cosmos_sdk.v1.ValAddresses.verify|verify} messages.
-       * @param m ValAddresses message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IValAddresses, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a ValAddresses message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns ValAddresses
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.ValAddresses;
-    }
-
-    /** Properties of a GasInfo. */
-    interface IGasInfo {
-      /** GasInfo gasWanted */
-      gasWanted?: number | Long | null;
-
-      /** GasInfo gasUsed */
-      gasUsed?: number | Long | null;
-    }
-
-    /** Represents a GasInfo. */
-    class GasInfo implements IGasInfo {
-      /**
-       * Constructs a new GasInfo.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IGasInfo);
-
-      /** GasInfo gasWanted. */
-      public gasWanted: number | Long;
-
-      /** GasInfo gasUsed. */
-      public gasUsed: number | Long;
-
-      /**
-       * Creates a new GasInfo instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns GasInfo instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IGasInfo): cosmos_sdk.v1.GasInfo;
-
-      /**
-       * Encodes the specified GasInfo message. Does not implicitly {@link cosmos_sdk.v1.GasInfo.verify|verify} messages.
-       * @param m GasInfo message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IGasInfo, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a GasInfo message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns GasInfo
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.GasInfo;
-    }
-
-    /** Properties of a Result. */
-    interface IResult {
-      /** Result data */
-      data?: Uint8Array | null;
-
-      /** Result log */
-      log?: string | null;
-
-      /** Result events */
-      events?: tendermint.abci.types.IEvent[] | null;
-    }
-
-    /** Represents a Result. */
-    class Result implements IResult {
-      /**
-       * Constructs a new Result.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IResult);
-
-      /** Result data. */
-      public data: Uint8Array;
-
-      /** Result log. */
-      public log: string;
-
-      /** Result events. */
-      public events: tendermint.abci.types.IEvent[];
-
-      /**
-       * Creates a new Result instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns Result instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IResult): cosmos_sdk.v1.Result;
-
-      /**
-       * Encodes the specified Result message. Does not implicitly {@link cosmos_sdk.v1.Result.verify|verify} messages.
-       * @param m Result message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IResult, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a Result message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns Result
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.Result;
-    }
-
-    /** Properties of a SimulationResponse. */
-    interface ISimulationResponse {
-      /** SimulationResponse gasInfo */
-      gasInfo?: cosmos_sdk.v1.IGasInfo | null;
-
-      /** SimulationResponse result */
-      result?: cosmos_sdk.v1.IResult | null;
-    }
-
-    /** Represents a SimulationResponse. */
-    class SimulationResponse implements ISimulationResponse {
-      /**
-       * Constructs a new SimulationResponse.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.ISimulationResponse);
-
-      /** SimulationResponse gasInfo. */
-      public gasInfo?: cosmos_sdk.v1.IGasInfo | null;
-
-      /** SimulationResponse result. */
-      public result?: cosmos_sdk.v1.IResult | null;
-
-      /**
-       * Creates a new SimulationResponse instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns SimulationResponse instance
-       */
-      public static create(properties?: cosmos_sdk.v1.ISimulationResponse): cosmos_sdk.v1.SimulationResponse;
-
-      /**
-       * Encodes the specified SimulationResponse message. Does not implicitly {@link cosmos_sdk.v1.SimulationResponse.verify|verify} messages.
-       * @param m SimulationResponse message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.ISimulationResponse, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a SimulationResponse message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns SimulationResponse
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.SimulationResponse;
-    }
-
-    /** Properties of a MsgData. */
-    interface IMsgData {
-      /** MsgData msgType */
-      msgType?: string | null;
-
-      /** MsgData data */
-      data?: Uint8Array | null;
-    }
-
-    /** Represents a MsgData. */
-    class MsgData implements IMsgData {
-      /**
-       * Constructs a new MsgData.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.IMsgData);
-
-      /** MsgData msgType. */
-      public msgType: string;
-
-      /** MsgData data. */
-      public data: Uint8Array;
-
-      /**
-       * Creates a new MsgData instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns MsgData instance
-       */
-      public static create(properties?: cosmos_sdk.v1.IMsgData): cosmos_sdk.v1.MsgData;
-
-      /**
-       * Encodes the specified MsgData message. Does not implicitly {@link cosmos_sdk.v1.MsgData.verify|verify} messages.
-       * @param m MsgData message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.IMsgData, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a MsgData message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns MsgData
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.MsgData;
-    }
-
-    /** Properties of a TxData. */
-    interface ITxData {
-      /** TxData data */
-      data?: cosmos_sdk.v1.IMsgData[] | null;
-    }
-
-    /** Represents a TxData. */
-    class TxData implements ITxData {
-      /**
-       * Constructs a new TxData.
-       * @param [p] Properties to set
-       */
-      constructor(p?: cosmos_sdk.v1.ITxData);
-
-      /** TxData data. */
-      public data: cosmos_sdk.v1.IMsgData[];
-
-      /**
-       * Creates a new TxData instance using the specified properties.
-       * @param [properties] Properties to set
-       * @returns TxData instance
-       */
-      public static create(properties?: cosmos_sdk.v1.ITxData): cosmos_sdk.v1.TxData;
-
-      /**
-       * Encodes the specified TxData message. Does not implicitly {@link cosmos_sdk.v1.TxData.verify|verify} messages.
-       * @param m TxData message or plain object to encode
-       * @param [w] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(m: cosmos_sdk.v1.ITxData, w?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a TxData message from the specified reader or buffer.
-       * @param r Reader or buffer to decode from
-       * @param [l] Message length if known beforehand
-       * @returns TxData
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.v1.TxData;
-    }
+  /** Represents a Coin. */
+  class Coin implements ICoin {
+    /**
+     * Constructs a new Coin.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.ICoin);
+
+    /** Coin denom. */
+    public denom: string;
+
+    /** Coin amount. */
+    public amount: string;
+
+    /**
+     * Creates a new Coin instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns Coin instance
+     */
+    public static create(properties?: cosmos.ICoin): cosmos.Coin;
+
+    /**
+     * Encodes the specified Coin message. Does not implicitly {@link cosmos.Coin.verify|verify} messages.
+     * @param m Coin message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.ICoin, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified Coin message, length delimited. Does not implicitly {@link cosmos.Coin.verify|verify} messages.
+     * @param message Coin message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.ICoin, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a Coin message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns Coin
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.Coin;
+
+    /**
+     * Decodes a Coin message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns Coin
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.Coin;
   }
 
-  /** Namespace tx. */
-  namespace tx {
-    /** Namespace v1. */
-    namespace v1 {
-      /** Properties of a Tx. */
-      interface ITx {
-        /** Tx body */
-        body?: cosmos_sdk.tx.v1.ITxBody | null;
-
-        /** Tx authInfo */
-        authInfo?: cosmos_sdk.tx.v1.IAuthInfo | null;
-
-        /** Tx signatures */
-        signatures?: Uint8Array[] | null;
-      }
-
-      /** Represents a Tx. */
-      class Tx implements ITx {
-        /**
-         * Constructs a new Tx.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.ITx);
-
-        /** Tx body. */
-        public body?: cosmos_sdk.tx.v1.ITxBody | null;
-
-        /** Tx authInfo. */
-        public authInfo?: cosmos_sdk.tx.v1.IAuthInfo | null;
-
-        /** Tx signatures. */
-        public signatures: Uint8Array[];
-
-        /**
-         * Creates a new Tx instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns Tx instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.ITx): cosmos_sdk.tx.v1.Tx;
-
-        /**
-         * Encodes the specified Tx message. Does not implicitly {@link cosmos_sdk.tx.v1.Tx.verify|verify} messages.
-         * @param m Tx message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.ITx, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a Tx message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns Tx
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.Tx;
-      }
-
-      /** Properties of a SignDoc. */
-      interface ISignDoc {
-        /** SignDoc body */
-        body?: cosmos_sdk.tx.v1.ITxBody | null;
-
-        /** SignDoc authInfo */
-        authInfo?: cosmos_sdk.tx.v1.IAuthInfo | null;
-
-        /** SignDoc chainId */
-        chainId?: string | null;
-
-        /** SignDoc accountNumber */
-        accountNumber?: number | Long | null;
-
-        /** SignDoc accountSequence */
-        accountSequence?: number | Long | null;
-      }
-
-      /** Represents a SignDoc. */
-      class SignDoc implements ISignDoc {
-        /**
-         * Constructs a new SignDoc.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.ISignDoc);
-
-        /** SignDoc body. */
-        public body?: cosmos_sdk.tx.v1.ITxBody | null;
-
-        /** SignDoc authInfo. */
-        public authInfo?: cosmos_sdk.tx.v1.IAuthInfo | null;
-
-        /** SignDoc chainId. */
-        public chainId: string;
-
-        /** SignDoc accountNumber. */
-        public accountNumber: number | Long;
-
-        /** SignDoc accountSequence. */
-        public accountSequence: number | Long;
-
-        /**
-         * Creates a new SignDoc instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns SignDoc instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.ISignDoc): cosmos_sdk.tx.v1.SignDoc;
-
-        /**
-         * Encodes the specified SignDoc message. Does not implicitly {@link cosmos_sdk.tx.v1.SignDoc.verify|verify} messages.
-         * @param m SignDoc message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.ISignDoc, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a SignDoc message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns SignDoc
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.SignDoc;
-      }
-
-      /** Properties of a TxBody. */
-      interface ITxBody {
-        /** TxBody messages */
-        messages?: google.protobuf.IAny[] | null;
-
-        /** TxBody memo */
-        memo?: string | null;
-
-        /** TxBody timeoutHeight */
-        timeoutHeight?: number | Long | null;
-
-        /** TxBody extensionOptions */
-        extensionOptions?: google.protobuf.IAny[] | null;
-
-        /** TxBody nonCriticalExtensionOptions */
-        nonCriticalExtensionOptions?: google.protobuf.IAny[] | null;
-      }
-
-      /** Represents a TxBody. */
-      class TxBody implements ITxBody {
-        /**
-         * Constructs a new TxBody.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.ITxBody);
-
-        /** TxBody messages. */
-        public messages: google.protobuf.IAny[];
-
-        /** TxBody memo. */
-        public memo: string;
-
-        /** TxBody timeoutHeight. */
-        public timeoutHeight: number | Long;
-
-        /** TxBody extensionOptions. */
-        public extensionOptions: google.protobuf.IAny[];
-
-        /** TxBody nonCriticalExtensionOptions. */
-        public nonCriticalExtensionOptions: google.protobuf.IAny[];
-
-        /**
-         * Creates a new TxBody instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns TxBody instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.ITxBody): cosmos_sdk.tx.v1.TxBody;
-
-        /**
-         * Encodes the specified TxBody message. Does not implicitly {@link cosmos_sdk.tx.v1.TxBody.verify|verify} messages.
-         * @param m TxBody message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.ITxBody, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a TxBody message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns TxBody
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.TxBody;
-      }
-
-      /** Properties of an AuthInfo. */
-      interface IAuthInfo {
-        /** AuthInfo signerInfos */
-        signerInfos?: cosmos_sdk.tx.v1.ISignerInfo[] | null;
-
-        /** AuthInfo fee */
-        fee?: cosmos_sdk.tx.v1.IFee | null;
-      }
-
-      /** Represents an AuthInfo. */
-      class AuthInfo implements IAuthInfo {
-        /**
-         * Constructs a new AuthInfo.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.IAuthInfo);
-
-        /** AuthInfo signerInfos. */
-        public signerInfos: cosmos_sdk.tx.v1.ISignerInfo[];
-
-        /** AuthInfo fee. */
-        public fee?: cosmos_sdk.tx.v1.IFee | null;
-
-        /**
-         * Creates a new AuthInfo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AuthInfo instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.IAuthInfo): cosmos_sdk.tx.v1.AuthInfo;
-
-        /**
-         * Encodes the specified AuthInfo message. Does not implicitly {@link cosmos_sdk.tx.v1.AuthInfo.verify|verify} messages.
-         * @param m AuthInfo message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.IAuthInfo, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes an AuthInfo message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns AuthInfo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.AuthInfo;
-      }
-
-      /** Properties of a SignerInfo. */
-      interface ISignerInfo {
-        /** SignerInfo publicKey */
-        publicKey?: google.protobuf.IAny | null;
-
-        /** SignerInfo modeInfo */
-        modeInfo?: cosmos_sdk.tx.v1.IModeInfo | null;
-      }
-
-      /** Represents a SignerInfo. */
-      class SignerInfo implements ISignerInfo {
-        /**
-         * Constructs a new SignerInfo.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.ISignerInfo);
-
-        /** SignerInfo publicKey. */
-        public publicKey?: google.protobuf.IAny | null;
-
-        /** SignerInfo modeInfo. */
-        public modeInfo?: cosmos_sdk.tx.v1.IModeInfo | null;
-
-        /**
-         * Creates a new SignerInfo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns SignerInfo instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.ISignerInfo): cosmos_sdk.tx.v1.SignerInfo;
-
-        /**
-         * Encodes the specified SignerInfo message. Does not implicitly {@link cosmos_sdk.tx.v1.SignerInfo.verify|verify} messages.
-         * @param m SignerInfo message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.ISignerInfo, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a SignerInfo message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns SignerInfo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.SignerInfo;
-      }
-
-      /** Properties of a ModeInfo. */
-      interface IModeInfo {
-        /** ModeInfo single */
-        single?: cosmos_sdk.tx.v1.ModeInfo.ISingle | null;
-
-        /** ModeInfo multi */
-        multi?: cosmos_sdk.tx.v1.ModeInfo.IMulti | null;
-      }
-
-      /** Represents a ModeInfo. */
-      class ModeInfo implements IModeInfo {
-        /**
-         * Constructs a new ModeInfo.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.IModeInfo);
-
-        /** ModeInfo single. */
-        public single?: cosmos_sdk.tx.v1.ModeInfo.ISingle | null;
-
-        /** ModeInfo multi. */
-        public multi?: cosmos_sdk.tx.v1.ModeInfo.IMulti | null;
-
-        /** ModeInfo sum. */
-        public sum?: "single" | "multi";
-
-        /**
-         * Creates a new ModeInfo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns ModeInfo instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.IModeInfo): cosmos_sdk.tx.v1.ModeInfo;
-
-        /**
-         * Encodes the specified ModeInfo message. Does not implicitly {@link cosmos_sdk.tx.v1.ModeInfo.verify|verify} messages.
-         * @param m ModeInfo message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.IModeInfo, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a ModeInfo message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns ModeInfo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.ModeInfo;
-      }
-
-      namespace ModeInfo {
-        /** Properties of a Single. */
-        interface ISingle {
-          /** Single mode */
-          mode?: cosmos_sdk.tx.signing.v1.SignMode | null;
-        }
-
-        /** Represents a Single. */
-        class Single implements ISingle {
-          /**
-           * Constructs a new Single.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.tx.v1.ModeInfo.ISingle);
-
-          /** Single mode. */
-          public mode: cosmos_sdk.tx.signing.v1.SignMode;
-
-          /**
-           * Creates a new Single instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns Single instance
-           */
-          public static create(
-            properties?: cosmos_sdk.tx.v1.ModeInfo.ISingle,
-          ): cosmos_sdk.tx.v1.ModeInfo.Single;
-
-          /**
-           * Encodes the specified Single message. Does not implicitly {@link cosmos_sdk.tx.v1.ModeInfo.Single.verify|verify} messages.
-           * @param m Single message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.tx.v1.ModeInfo.ISingle, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes a Single message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns Single
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(
-            r: $protobuf.Reader | Uint8Array,
-            l?: number,
-          ): cosmos_sdk.tx.v1.ModeInfo.Single;
-        }
-
-        /** Properties of a Multi. */
-        interface IMulti {
-          /** Multi bitarray */
-          bitarray?: cosmos_sdk.crypto.v1.ICompactBitArray | null;
-
-          /** Multi modeInfos */
-          modeInfos?: cosmos_sdk.tx.v1.IModeInfo[] | null;
-        }
-
-        /** Represents a Multi. */
-        class Multi implements IMulti {
-          /**
-           * Constructs a new Multi.
-           * @param [p] Properties to set
-           */
-          constructor(p?: cosmos_sdk.tx.v1.ModeInfo.IMulti);
-
-          /** Multi bitarray. */
-          public bitarray?: cosmos_sdk.crypto.v1.ICompactBitArray | null;
-
-          /** Multi modeInfos. */
-          public modeInfos: cosmos_sdk.tx.v1.IModeInfo[];
-
-          /**
-           * Creates a new Multi instance using the specified properties.
-           * @param [properties] Properties to set
-           * @returns Multi instance
-           */
-          public static create(
-            properties?: cosmos_sdk.tx.v1.ModeInfo.IMulti,
-          ): cosmos_sdk.tx.v1.ModeInfo.Multi;
-
-          /**
-           * Encodes the specified Multi message. Does not implicitly {@link cosmos_sdk.tx.v1.ModeInfo.Multi.verify|verify} messages.
-           * @param m Multi message or plain object to encode
-           * @param [w] Writer to encode to
-           * @returns Writer
-           */
-          public static encode(m: cosmos_sdk.tx.v1.ModeInfo.IMulti, w?: $protobuf.Writer): $protobuf.Writer;
-
-          /**
-           * Decodes a Multi message from the specified reader or buffer.
-           * @param r Reader or buffer to decode from
-           * @param [l] Message length if known beforehand
-           * @returns Multi
-           * @throws {Error} If the payload is not a reader or valid buffer
-           * @throws {$protobuf.util.ProtocolError} If required fields are missing
-           */
-          public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.ModeInfo.Multi;
-        }
-      }
-
-      /** Properties of a Fee. */
-      interface IFee {
-        /** Fee amount */
-        amount?: cosmos_sdk.v1.ICoin[] | null;
-
-        /** Fee gasLimit */
-        gasLimit?: number | Long | null;
-      }
-
-      /** Represents a Fee. */
-      class Fee implements IFee {
-        /**
-         * Constructs a new Fee.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.tx.v1.IFee);
-
-        /** Fee amount. */
-        public amount: cosmos_sdk.v1.ICoin[];
-
-        /** Fee gasLimit. */
-        public gasLimit: number | Long;
-
-        /**
-         * Creates a new Fee instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns Fee instance
-         */
-        public static create(properties?: cosmos_sdk.tx.v1.IFee): cosmos_sdk.tx.v1.Fee;
-
-        /**
-         * Encodes the specified Fee message. Does not implicitly {@link cosmos_sdk.tx.v1.Fee.verify|verify} messages.
-         * @param m Fee message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.tx.v1.IFee, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a Fee message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns Fee
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.tx.v1.Fee;
-      }
+  /** Properties of a DecCoin. */
+  interface IDecCoin {
+    /** DecCoin denom */
+    denom?: string | null;
+
+    /** DecCoin amount */
+    amount?: string | null;
+  }
+
+  /** Represents a DecCoin. */
+  class DecCoin implements IDecCoin {
+    /**
+     * Constructs a new DecCoin.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IDecCoin);
+
+    /** DecCoin denom. */
+    public denom: string;
+
+    /** DecCoin amount. */
+    public amount: string;
+
+    /**
+     * Creates a new DecCoin instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns DecCoin instance
+     */
+    public static create(properties?: cosmos.IDecCoin): cosmos.DecCoin;
+
+    /**
+     * Encodes the specified DecCoin message. Does not implicitly {@link cosmos.DecCoin.verify|verify} messages.
+     * @param m DecCoin message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IDecCoin, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified DecCoin message, length delimited. Does not implicitly {@link cosmos.DecCoin.verify|verify} messages.
+     * @param message DecCoin message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IDecCoin, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a DecCoin message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns DecCoin
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.DecCoin;
+
+    /**
+     * Decodes a DecCoin message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns DecCoin
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.DecCoin;
+  }
+
+  /** Properties of an IntProto. */
+  interface IIntProto {
+    /** IntProto int */
+    int?: string | null;
+  }
+
+  /** Represents an IntProto. */
+  class IntProto implements IIntProto {
+    /**
+     * Constructs a new IntProto.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IIntProto);
+
+    /** IntProto int. */
+    public int: string;
+
+    /**
+     * Creates a new IntProto instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns IntProto instance
+     */
+    public static create(properties?: cosmos.IIntProto): cosmos.IntProto;
+
+    /**
+     * Encodes the specified IntProto message. Does not implicitly {@link cosmos.IntProto.verify|verify} messages.
+     * @param m IntProto message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IIntProto, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified IntProto message, length delimited. Does not implicitly {@link cosmos.IntProto.verify|verify} messages.
+     * @param message IntProto message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IIntProto, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes an IntProto message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns IntProto
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.IntProto;
+
+    /**
+     * Decodes an IntProto message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns IntProto
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.IntProto;
+  }
+
+  /** Properties of a DecProto. */
+  interface IDecProto {
+    /** DecProto dec */
+    dec?: string | null;
+  }
+
+  /** Represents a DecProto. */
+  class DecProto implements IDecProto {
+    /**
+     * Constructs a new DecProto.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IDecProto);
+
+    /** DecProto dec. */
+    public dec: string;
+
+    /**
+     * Creates a new DecProto instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns DecProto instance
+     */
+    public static create(properties?: cosmos.IDecProto): cosmos.DecProto;
+
+    /**
+     * Encodes the specified DecProto message. Does not implicitly {@link cosmos.DecProto.verify|verify} messages.
+     * @param m DecProto message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IDecProto, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified DecProto message, length delimited. Does not implicitly {@link cosmos.DecProto.verify|verify} messages.
+     * @param message DecProto message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IDecProto, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a DecProto message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns DecProto
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.DecProto;
+
+    /**
+     * Decodes a DecProto message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns DecProto
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.DecProto;
+  }
+
+  /** Properties of a ValAddresses. */
+  interface IValAddresses {
+    /** ValAddresses addresses */
+    addresses?: Uint8Array[] | null;
+  }
+
+  /** Represents a ValAddresses. */
+  class ValAddresses implements IValAddresses {
+    /**
+     * Constructs a new ValAddresses.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IValAddresses);
+
+    /** ValAddresses addresses. */
+    public addresses: Uint8Array[];
+
+    /**
+     * Creates a new ValAddresses instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns ValAddresses instance
+     */
+    public static create(properties?: cosmos.IValAddresses): cosmos.ValAddresses;
+
+    /**
+     * Encodes the specified ValAddresses message. Does not implicitly {@link cosmos.ValAddresses.verify|verify} messages.
+     * @param m ValAddresses message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IValAddresses, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified ValAddresses message, length delimited. Does not implicitly {@link cosmos.ValAddresses.verify|verify} messages.
+     * @param message ValAddresses message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IValAddresses, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a ValAddresses message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns ValAddresses
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.ValAddresses;
+
+    /**
+     * Decodes a ValAddresses message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns ValAddresses
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.ValAddresses;
+  }
+
+  /** Properties of a GasInfo. */
+  interface IGasInfo {
+    /** GasInfo gasWanted */
+    gasWanted?: number | Long | null;
+
+    /** GasInfo gasUsed */
+    gasUsed?: number | Long | null;
+  }
+
+  /** Represents a GasInfo. */
+  class GasInfo implements IGasInfo {
+    /**
+     * Constructs a new GasInfo.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IGasInfo);
+
+    /** GasInfo gasWanted. */
+    public gasWanted: number | Long;
+
+    /** GasInfo gasUsed. */
+    public gasUsed: number | Long;
+
+    /**
+     * Creates a new GasInfo instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns GasInfo instance
+     */
+    public static create(properties?: cosmos.IGasInfo): cosmos.GasInfo;
+
+    /**
+     * Encodes the specified GasInfo message. Does not implicitly {@link cosmos.GasInfo.verify|verify} messages.
+     * @param m GasInfo message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IGasInfo, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified GasInfo message, length delimited. Does not implicitly {@link cosmos.GasInfo.verify|verify} messages.
+     * @param message GasInfo message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IGasInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a GasInfo message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns GasInfo
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.GasInfo;
+
+    /**
+     * Decodes a GasInfo message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns GasInfo
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.GasInfo;
+  }
+
+  /** Properties of a Result. */
+  interface IResult {
+    /** Result data */
+    data?: Uint8Array | null;
+
+    /** Result log */
+    log?: string | null;
+
+    /** Result events */
+    events?: tendermint.abci.types.IEvent[] | null;
+  }
+
+  /** Represents a Result. */
+  class Result implements IResult {
+    /**
+     * Constructs a new Result.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IResult);
+
+    /** Result data. */
+    public data: Uint8Array;
+
+    /** Result log. */
+    public log: string;
+
+    /** Result events. */
+    public events: tendermint.abci.types.IEvent[];
+
+    /**
+     * Creates a new Result instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns Result instance
+     */
+    public static create(properties?: cosmos.IResult): cosmos.Result;
+
+    /**
+     * Encodes the specified Result message. Does not implicitly {@link cosmos.Result.verify|verify} messages.
+     * @param m Result message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IResult, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified Result message, length delimited. Does not implicitly {@link cosmos.Result.verify|verify} messages.
+     * @param message Result message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IResult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a Result message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns Result
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.Result;
+
+    /**
+     * Decodes a Result message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns Result
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.Result;
+  }
+
+  /** Properties of a SimulationResponse. */
+  interface ISimulationResponse {
+    /** SimulationResponse gasInfo */
+    gasInfo?: cosmos.IGasInfo | null;
+
+    /** SimulationResponse result */
+    result?: cosmos.IResult | null;
+  }
+
+  /** Represents a SimulationResponse. */
+  class SimulationResponse implements ISimulationResponse {
+    /**
+     * Constructs a new SimulationResponse.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.ISimulationResponse);
+
+    /** SimulationResponse gasInfo. */
+    public gasInfo?: cosmos.IGasInfo | null;
+
+    /** SimulationResponse result. */
+    public result?: cosmos.IResult | null;
+
+    /**
+     * Creates a new SimulationResponse instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns SimulationResponse instance
+     */
+    public static create(properties?: cosmos.ISimulationResponse): cosmos.SimulationResponse;
+
+    /**
+     * Encodes the specified SimulationResponse message. Does not implicitly {@link cosmos.SimulationResponse.verify|verify} messages.
+     * @param m SimulationResponse message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.ISimulationResponse, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified SimulationResponse message, length delimited. Does not implicitly {@link cosmos.SimulationResponse.verify|verify} messages.
+     * @param message SimulationResponse message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(
+      message: cosmos.ISimulationResponse,
+      writer?: $protobuf.Writer,
+    ): $protobuf.Writer;
+
+    /**
+     * Decodes a SimulationResponse message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns SimulationResponse
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.SimulationResponse;
+
+    /**
+     * Decodes a SimulationResponse message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns SimulationResponse
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.SimulationResponse;
+  }
+
+  /** Properties of a MsgData. */
+  interface IMsgData {
+    /** MsgData msgType */
+    msgType?: string | null;
+
+    /** MsgData data */
+    data?: Uint8Array | null;
+  }
+
+  /** Represents a MsgData. */
+  class MsgData implements IMsgData {
+    /**
+     * Constructs a new MsgData.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.IMsgData);
+
+    /** MsgData msgType. */
+    public msgType: string;
+
+    /** MsgData data. */
+    public data: Uint8Array;
+
+    /**
+     * Creates a new MsgData instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns MsgData instance
+     */
+    public static create(properties?: cosmos.IMsgData): cosmos.MsgData;
+
+    /**
+     * Encodes the specified MsgData message. Does not implicitly {@link cosmos.MsgData.verify|verify} messages.
+     * @param m MsgData message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.IMsgData, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified MsgData message, length delimited. Does not implicitly {@link cosmos.MsgData.verify|verify} messages.
+     * @param message MsgData message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.IMsgData, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a MsgData message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns MsgData
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.MsgData;
+
+    /**
+     * Decodes a MsgData message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns MsgData
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.MsgData;
+  }
+
+  /** Properties of a TxData. */
+  interface ITxData {
+    /** TxData data */
+    data?: cosmos.IMsgData[] | null;
+  }
+
+  /** Represents a TxData. */
+  class TxData implements ITxData {
+    /**
+     * Constructs a new TxData.
+     * @param [p] Properties to set
+     */
+    constructor(p?: cosmos.ITxData);
+
+    /** TxData data. */
+    public data: cosmos.IMsgData[];
+
+    /**
+     * Creates a new TxData instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns TxData instance
+     */
+    public static create(properties?: cosmos.ITxData): cosmos.TxData;
+
+    /**
+     * Encodes the specified TxData message. Does not implicitly {@link cosmos.TxData.verify|verify} messages.
+     * @param m TxData message or plain object to encode
+     * @param [w] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(m: cosmos.ITxData, w?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified TxData message, length delimited. Does not implicitly {@link cosmos.TxData.verify|verify} messages.
+     * @param message TxData message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: cosmos.ITxData, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a TxData message from the specified reader or buffer.
+     * @param r Reader or buffer to decode from
+     * @param [l] Message length if known beforehand
+     * @returns TxData
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.TxData;
+
+    /**
+     * Decodes a TxData message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns TxData
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.TxData;
+  }
+
+  /** Namespace bank. */
+  namespace bank {
+    /** Properties of a MsgSend. */
+    interface IMsgSend {
+      /** MsgSend fromAddress */
+      fromAddress?: Uint8Array | null;
+
+      /** MsgSend toAddress */
+      toAddress?: Uint8Array | null;
+
+      /** MsgSend amount */
+      amount?: cosmos.ICoin[] | null;
     }
 
-    /** Namespace signing. */
-    namespace signing {
-      /** Namespace v1. */
-      namespace v1 {
-        /** SignMode enum. */
-        enum SignMode {
-          SIGN_MODE_UNSPECIFIED = 0,
-          SIGN_MODE_DIRECT = 1,
-          SIGN_MODE_TEXTUAL = 2,
-          SIGN_MODE_LEGACY_AMINO_JSON = 127,
-        }
-      }
+    /** Represents a MsgSend. */
+    class MsgSend implements IMsgSend {
+      /**
+       * Constructs a new MsgSend.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.bank.IMsgSend);
+
+      /** MsgSend fromAddress. */
+      public fromAddress: Uint8Array;
+
+      /** MsgSend toAddress. */
+      public toAddress: Uint8Array;
+
+      /** MsgSend amount. */
+      public amount: cosmos.ICoin[];
+
+      /**
+       * Creates a new MsgSend instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns MsgSend instance
+       */
+      public static create(properties?: cosmos.bank.IMsgSend): cosmos.bank.MsgSend;
+
+      /**
+       * Encodes the specified MsgSend message. Does not implicitly {@link cosmos.bank.MsgSend.verify|verify} messages.
+       * @param m MsgSend message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.bank.IMsgSend, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgSend message, length delimited. Does not implicitly {@link cosmos.bank.MsgSend.verify|verify} messages.
+       * @param message MsgSend message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.bank.IMsgSend,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgSend message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns MsgSend
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.bank.MsgSend;
+
+      /**
+       * Decodes a MsgSend message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgSend
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.bank.MsgSend;
+    }
+
+    /** Properties of an Input. */
+    interface IInput {
+      /** Input address */
+      address?: Uint8Array | null;
+
+      /** Input coins */
+      coins?: cosmos.ICoin[] | null;
+    }
+
+    /** Represents an Input. */
+    class Input implements IInput {
+      /**
+       * Constructs a new Input.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.bank.IInput);
+
+      /** Input address. */
+      public address: Uint8Array;
+
+      /** Input coins. */
+      public coins: cosmos.ICoin[];
+
+      /**
+       * Creates a new Input instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns Input instance
+       */
+      public static create(properties?: cosmos.bank.IInput): cosmos.bank.Input;
+
+      /**
+       * Encodes the specified Input message. Does not implicitly {@link cosmos.bank.Input.verify|verify} messages.
+       * @param m Input message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.bank.IInput, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Input message, length delimited. Does not implicitly {@link cosmos.bank.Input.verify|verify} messages.
+       * @param message Input message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: cosmos.bank.IInput, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes an Input message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns Input
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.bank.Input;
+
+      /**
+       * Decodes an Input message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Input
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.bank.Input;
+    }
+
+    /** Properties of an Output. */
+    interface IOutput {
+      /** Output address */
+      address?: Uint8Array | null;
+
+      /** Output coins */
+      coins?: cosmos.ICoin[] | null;
+    }
+
+    /** Represents an Output. */
+    class Output implements IOutput {
+      /**
+       * Constructs a new Output.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.bank.IOutput);
+
+      /** Output address. */
+      public address: Uint8Array;
+
+      /** Output coins. */
+      public coins: cosmos.ICoin[];
+
+      /**
+       * Creates a new Output instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns Output instance
+       */
+      public static create(properties?: cosmos.bank.IOutput): cosmos.bank.Output;
+
+      /**
+       * Encodes the specified Output message. Does not implicitly {@link cosmos.bank.Output.verify|verify} messages.
+       * @param m Output message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.bank.IOutput, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Output message, length delimited. Does not implicitly {@link cosmos.bank.Output.verify|verify} messages.
+       * @param message Output message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.bank.IOutput,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes an Output message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns Output
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.bank.Output;
+
+      /**
+       * Decodes an Output message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Output
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.bank.Output;
+    }
+
+    /** Properties of a MsgMultiSend. */
+    interface IMsgMultiSend {
+      /** MsgMultiSend inputs */
+      inputs?: cosmos.bank.IInput[] | null;
+
+      /** MsgMultiSend outputs */
+      outputs?: cosmos.bank.IOutput[] | null;
+    }
+
+    /** Represents a MsgMultiSend. */
+    class MsgMultiSend implements IMsgMultiSend {
+      /**
+       * Constructs a new MsgMultiSend.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.bank.IMsgMultiSend);
+
+      /** MsgMultiSend inputs. */
+      public inputs: cosmos.bank.IInput[];
+
+      /** MsgMultiSend outputs. */
+      public outputs: cosmos.bank.IOutput[];
+
+      /**
+       * Creates a new MsgMultiSend instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns MsgMultiSend instance
+       */
+      public static create(properties?: cosmos.bank.IMsgMultiSend): cosmos.bank.MsgMultiSend;
+
+      /**
+       * Encodes the specified MsgMultiSend message. Does not implicitly {@link cosmos.bank.MsgMultiSend.verify|verify} messages.
+       * @param m MsgMultiSend message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.bank.IMsgMultiSend, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgMultiSend message, length delimited. Does not implicitly {@link cosmos.bank.MsgMultiSend.verify|verify} messages.
+       * @param message MsgMultiSend message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.bank.IMsgMultiSend,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgMultiSend message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns MsgMultiSend
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.bank.MsgMultiSend;
+
+      /**
+       * Decodes a MsgMultiSend message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgMultiSend
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.bank.MsgMultiSend;
+    }
+
+    /** Properties of a Supply. */
+    interface ISupply {
+      /** Supply total */
+      total?: cosmos.ICoin[] | null;
+    }
+
+    /** Represents a Supply. */
+    class Supply implements ISupply {
+      /**
+       * Constructs a new Supply.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.bank.ISupply);
+
+      /** Supply total. */
+      public total: cosmos.ICoin[];
+
+      /**
+       * Creates a new Supply instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns Supply instance
+       */
+      public static create(properties?: cosmos.bank.ISupply): cosmos.bank.Supply;
+
+      /**
+       * Encodes the specified Supply message. Does not implicitly {@link cosmos.bank.Supply.verify|verify} messages.
+       * @param m Supply message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.bank.ISupply, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Supply message, length delimited. Does not implicitly {@link cosmos.bank.Supply.verify|verify} messages.
+       * @param message Supply message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.bank.ISupply,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a Supply message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns Supply
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.bank.Supply;
+
+      /**
+       * Decodes a Supply message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Supply
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.bank.Supply;
     }
   }
 
   /** Namespace crypto. */
   namespace crypto {
-    /** Namespace v1. */
-    namespace v1 {
-      /** Properties of a PublicKey. */
-      interface IPublicKey {
-        /** PublicKey secp256k1 */
-        secp256k1?: Uint8Array | null;
+    /** Properties of a PublicKey. */
+    interface IPublicKey {
+      /** PublicKey secp256k1 */
+      secp256k1?: Uint8Array | null;
 
-        /** PublicKey ed25519 */
-        ed25519?: Uint8Array | null;
+      /** PublicKey ed25519 */
+      ed25519?: Uint8Array | null;
 
-        /** PublicKey sr25519 */
-        sr25519?: Uint8Array | null;
+      /** PublicKey sr25519 */
+      sr25519?: Uint8Array | null;
 
-        /** PublicKey multisig */
-        multisig?: cosmos_sdk.crypto.v1.IPubKeyMultisigThreshold | null;
+      /** PublicKey multisig */
+      multisig?: cosmos.crypto.IPubKeyMultisigThreshold | null;
 
-        /** PublicKey secp256r1 */
-        secp256r1?: Uint8Array | null;
+      /** PublicKey secp256r1 */
+      secp256r1?: Uint8Array | null;
 
-        /** PublicKey anyPubkey */
-        anyPubkey?: google.protobuf.IAny | null;
+      /** PublicKey anyPubkey */
+      anyPubkey?: google.protobuf.IAny | null;
+    }
+
+    /** Represents a PublicKey. */
+    class PublicKey implements IPublicKey {
+      /**
+       * Constructs a new PublicKey.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.crypto.IPublicKey);
+
+      /** PublicKey secp256k1. */
+      public secp256k1: Uint8Array;
+
+      /** PublicKey ed25519. */
+      public ed25519: Uint8Array;
+
+      /** PublicKey sr25519. */
+      public sr25519: Uint8Array;
+
+      /** PublicKey multisig. */
+      public multisig?: cosmos.crypto.IPubKeyMultisigThreshold | null;
+
+      /** PublicKey secp256r1. */
+      public secp256r1: Uint8Array;
+
+      /** PublicKey anyPubkey. */
+      public anyPubkey?: google.protobuf.IAny | null;
+
+      /** PublicKey sum. */
+      public sum?: "secp256k1" | "ed25519" | "sr25519" | "multisig" | "secp256r1" | "anyPubkey";
+
+      /**
+       * Creates a new PublicKey instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns PublicKey instance
+       */
+      public static create(properties?: cosmos.crypto.IPublicKey): cosmos.crypto.PublicKey;
+
+      /**
+       * Encodes the specified PublicKey message. Does not implicitly {@link cosmos.crypto.PublicKey.verify|verify} messages.
+       * @param m PublicKey message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.crypto.IPublicKey, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified PublicKey message, length delimited. Does not implicitly {@link cosmos.crypto.PublicKey.verify|verify} messages.
+       * @param message PublicKey message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.crypto.IPublicKey,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a PublicKey message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns PublicKey
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.crypto.PublicKey;
+
+      /**
+       * Decodes a PublicKey message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns PublicKey
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.crypto.PublicKey;
+    }
+
+    /** Properties of a PubKeyMultisigThreshold. */
+    interface IPubKeyMultisigThreshold {
+      /** PubKeyMultisigThreshold threshold */
+      threshold?: number | null;
+
+      /** PubKeyMultisigThreshold publicKeys */
+      publicKeys?: cosmos.crypto.IPublicKey[] | null;
+    }
+
+    /** Represents a PubKeyMultisigThreshold. */
+    class PubKeyMultisigThreshold implements IPubKeyMultisigThreshold {
+      /**
+       * Constructs a new PubKeyMultisigThreshold.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.crypto.IPubKeyMultisigThreshold);
+
+      /** PubKeyMultisigThreshold threshold. */
+      public threshold: number;
+
+      /** PubKeyMultisigThreshold publicKeys. */
+      public publicKeys: cosmos.crypto.IPublicKey[];
+
+      /**
+       * Creates a new PubKeyMultisigThreshold instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns PubKeyMultisigThreshold instance
+       */
+      public static create(
+        properties?: cosmos.crypto.IPubKeyMultisigThreshold,
+      ): cosmos.crypto.PubKeyMultisigThreshold;
+
+      /**
+       * Encodes the specified PubKeyMultisigThreshold message. Does not implicitly {@link cosmos.crypto.PubKeyMultisigThreshold.verify|verify} messages.
+       * @param m PubKeyMultisigThreshold message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.crypto.IPubKeyMultisigThreshold, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified PubKeyMultisigThreshold message, length delimited. Does not implicitly {@link cosmos.crypto.PubKeyMultisigThreshold.verify|verify} messages.
+       * @param message PubKeyMultisigThreshold message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.crypto.IPubKeyMultisigThreshold,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a PubKeyMultisigThreshold message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns PubKeyMultisigThreshold
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        r: $protobuf.Reader | Uint8Array,
+        l?: number,
+      ): cosmos.crypto.PubKeyMultisigThreshold;
+
+      /**
+       * Decodes a PubKeyMultisigThreshold message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns PubKeyMultisigThreshold
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(
+        reader: $protobuf.Reader | Uint8Array,
+      ): cosmos.crypto.PubKeyMultisigThreshold;
+    }
+
+    /** Properties of a MultiSignature. */
+    interface IMultiSignature {
+      /** MultiSignature signatures */
+      signatures?: Uint8Array[] | null;
+    }
+
+    /** Represents a MultiSignature. */
+    class MultiSignature implements IMultiSignature {
+      /**
+       * Constructs a new MultiSignature.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.crypto.IMultiSignature);
+
+      /** MultiSignature signatures. */
+      public signatures: Uint8Array[];
+
+      /**
+       * Creates a new MultiSignature instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns MultiSignature instance
+       */
+      public static create(properties?: cosmos.crypto.IMultiSignature): cosmos.crypto.MultiSignature;
+
+      /**
+       * Encodes the specified MultiSignature message. Does not implicitly {@link cosmos.crypto.MultiSignature.verify|verify} messages.
+       * @param m MultiSignature message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.crypto.IMultiSignature, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MultiSignature message, length delimited. Does not implicitly {@link cosmos.crypto.MultiSignature.verify|verify} messages.
+       * @param message MultiSignature message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.crypto.IMultiSignature,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MultiSignature message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns MultiSignature
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.crypto.MultiSignature;
+
+      /**
+       * Decodes a MultiSignature message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MultiSignature
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.crypto.MultiSignature;
+    }
+
+    /** Properties of a CompactBitArray. */
+    interface ICompactBitArray {
+      /** CompactBitArray extraBitsStored */
+      extraBitsStored?: number | null;
+
+      /** CompactBitArray elems */
+      elems?: Uint8Array | null;
+    }
+
+    /** Represents a CompactBitArray. */
+    class CompactBitArray implements ICompactBitArray {
+      /**
+       * Constructs a new CompactBitArray.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.crypto.ICompactBitArray);
+
+      /** CompactBitArray extraBitsStored. */
+      public extraBitsStored: number;
+
+      /** CompactBitArray elems. */
+      public elems: Uint8Array;
+
+      /**
+       * Creates a new CompactBitArray instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns CompactBitArray instance
+       */
+      public static create(properties?: cosmos.crypto.ICompactBitArray): cosmos.crypto.CompactBitArray;
+
+      /**
+       * Encodes the specified CompactBitArray message. Does not implicitly {@link cosmos.crypto.CompactBitArray.verify|verify} messages.
+       * @param m CompactBitArray message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.crypto.ICompactBitArray, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified CompactBitArray message, length delimited. Does not implicitly {@link cosmos.crypto.CompactBitArray.verify|verify} messages.
+       * @param message CompactBitArray message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.crypto.ICompactBitArray,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a CompactBitArray message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns CompactBitArray
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.crypto.CompactBitArray;
+
+      /**
+       * Decodes a CompactBitArray message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns CompactBitArray
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.crypto.CompactBitArray;
+    }
+  }
+
+  /** Namespace tx. */
+  namespace tx {
+    /** Properties of a Tx. */
+    interface ITx {
+      /** Tx body */
+      body?: cosmos.tx.ITxBody | null;
+
+      /** Tx authInfo */
+      authInfo?: cosmos.tx.IAuthInfo | null;
+
+      /** Tx signatures */
+      signatures?: Uint8Array[] | null;
+    }
+
+    /** Represents a Tx. */
+    class Tx implements ITx {
+      /**
+       * Constructs a new Tx.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.ITx);
+
+      /** Tx body. */
+      public body?: cosmos.tx.ITxBody | null;
+
+      /** Tx authInfo. */
+      public authInfo?: cosmos.tx.IAuthInfo | null;
+
+      /** Tx signatures. */
+      public signatures: Uint8Array[];
+
+      /**
+       * Creates a new Tx instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns Tx instance
+       */
+      public static create(properties?: cosmos.tx.ITx): cosmos.tx.Tx;
+
+      /**
+       * Encodes the specified Tx message. Does not implicitly {@link cosmos.tx.Tx.verify|verify} messages.
+       * @param m Tx message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.ITx, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Tx message, length delimited. Does not implicitly {@link cosmos.tx.Tx.verify|verify} messages.
+       * @param message Tx message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: cosmos.tx.ITx, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Tx message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns Tx
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.Tx;
+
+      /**
+       * Decodes a Tx message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Tx
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.Tx;
+    }
+
+    /** Properties of a SignDoc. */
+    interface ISignDoc {
+      /** SignDoc body */
+      body?: cosmos.tx.ITxBody | null;
+
+      /** SignDoc authInfo */
+      authInfo?: cosmos.tx.IAuthInfo | null;
+
+      /** SignDoc chainId */
+      chainId?: string | null;
+
+      /** SignDoc accountNumber */
+      accountNumber?: number | Long | null;
+
+      /** SignDoc accountSequence */
+      accountSequence?: number | Long | null;
+    }
+
+    /** Represents a SignDoc. */
+    class SignDoc implements ISignDoc {
+      /**
+       * Constructs a new SignDoc.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.ISignDoc);
+
+      /** SignDoc body. */
+      public body?: cosmos.tx.ITxBody | null;
+
+      /** SignDoc authInfo. */
+      public authInfo?: cosmos.tx.IAuthInfo | null;
+
+      /** SignDoc chainId. */
+      public chainId: string;
+
+      /** SignDoc accountNumber. */
+      public accountNumber: number | Long;
+
+      /** SignDoc accountSequence. */
+      public accountSequence: number | Long;
+
+      /**
+       * Creates a new SignDoc instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns SignDoc instance
+       */
+      public static create(properties?: cosmos.tx.ISignDoc): cosmos.tx.SignDoc;
+
+      /**
+       * Encodes the specified SignDoc message. Does not implicitly {@link cosmos.tx.SignDoc.verify|verify} messages.
+       * @param m SignDoc message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.ISignDoc, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified SignDoc message, length delimited. Does not implicitly {@link cosmos.tx.SignDoc.verify|verify} messages.
+       * @param message SignDoc message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: cosmos.tx.ISignDoc, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a SignDoc message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns SignDoc
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.SignDoc;
+
+      /**
+       * Decodes a SignDoc message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns SignDoc
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.SignDoc;
+    }
+
+    /** Properties of a TxBody. */
+    interface ITxBody {
+      /** TxBody messages */
+      messages?: google.protobuf.IAny[] | null;
+
+      /** TxBody memo */
+      memo?: string | null;
+
+      /** TxBody timeoutHeight */
+      timeoutHeight?: number | Long | null;
+
+      /** TxBody extensionOptions */
+      extensionOptions?: google.protobuf.IAny[] | null;
+
+      /** TxBody nonCriticalExtensionOptions */
+      nonCriticalExtensionOptions?: google.protobuf.IAny[] | null;
+    }
+
+    /** Represents a TxBody. */
+    class TxBody implements ITxBody {
+      /**
+       * Constructs a new TxBody.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.ITxBody);
+
+      /** TxBody messages. */
+      public messages: google.protobuf.IAny[];
+
+      /** TxBody memo. */
+      public memo: string;
+
+      /** TxBody timeoutHeight. */
+      public timeoutHeight: number | Long;
+
+      /** TxBody extensionOptions. */
+      public extensionOptions: google.protobuf.IAny[];
+
+      /** TxBody nonCriticalExtensionOptions. */
+      public nonCriticalExtensionOptions: google.protobuf.IAny[];
+
+      /**
+       * Creates a new TxBody instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns TxBody instance
+       */
+      public static create(properties?: cosmos.tx.ITxBody): cosmos.tx.TxBody;
+
+      /**
+       * Encodes the specified TxBody message. Does not implicitly {@link cosmos.tx.TxBody.verify|verify} messages.
+       * @param m TxBody message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.ITxBody, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified TxBody message, length delimited. Does not implicitly {@link cosmos.tx.TxBody.verify|verify} messages.
+       * @param message TxBody message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: cosmos.tx.ITxBody, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a TxBody message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns TxBody
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.TxBody;
+
+      /**
+       * Decodes a TxBody message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns TxBody
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.TxBody;
+    }
+
+    /** Properties of an AuthInfo. */
+    interface IAuthInfo {
+      /** AuthInfo signerInfos */
+      signerInfos?: cosmos.tx.ISignerInfo[] | null;
+
+      /** AuthInfo fee */
+      fee?: cosmos.tx.IFee | null;
+    }
+
+    /** Represents an AuthInfo. */
+    class AuthInfo implements IAuthInfo {
+      /**
+       * Constructs a new AuthInfo.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.IAuthInfo);
+
+      /** AuthInfo signerInfos. */
+      public signerInfos: cosmos.tx.ISignerInfo[];
+
+      /** AuthInfo fee. */
+      public fee?: cosmos.tx.IFee | null;
+
+      /**
+       * Creates a new AuthInfo instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns AuthInfo instance
+       */
+      public static create(properties?: cosmos.tx.IAuthInfo): cosmos.tx.AuthInfo;
+
+      /**
+       * Encodes the specified AuthInfo message. Does not implicitly {@link cosmos.tx.AuthInfo.verify|verify} messages.
+       * @param m AuthInfo message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.IAuthInfo, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified AuthInfo message, length delimited. Does not implicitly {@link cosmos.tx.AuthInfo.verify|verify} messages.
+       * @param message AuthInfo message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.tx.IAuthInfo,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes an AuthInfo message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns AuthInfo
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.AuthInfo;
+
+      /**
+       * Decodes an AuthInfo message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns AuthInfo
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.AuthInfo;
+    }
+
+    /** Properties of a SignerInfo. */
+    interface ISignerInfo {
+      /** SignerInfo publicKey */
+      publicKey?: google.protobuf.IAny | null;
+
+      /** SignerInfo modeInfo */
+      modeInfo?: cosmos.tx.IModeInfo | null;
+    }
+
+    /** Represents a SignerInfo. */
+    class SignerInfo implements ISignerInfo {
+      /**
+       * Constructs a new SignerInfo.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.ISignerInfo);
+
+      /** SignerInfo publicKey. */
+      public publicKey?: google.protobuf.IAny | null;
+
+      /** SignerInfo modeInfo. */
+      public modeInfo?: cosmos.tx.IModeInfo | null;
+
+      /**
+       * Creates a new SignerInfo instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns SignerInfo instance
+       */
+      public static create(properties?: cosmos.tx.ISignerInfo): cosmos.tx.SignerInfo;
+
+      /**
+       * Encodes the specified SignerInfo message. Does not implicitly {@link cosmos.tx.SignerInfo.verify|verify} messages.
+       * @param m SignerInfo message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.ISignerInfo, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified SignerInfo message, length delimited. Does not implicitly {@link cosmos.tx.SignerInfo.verify|verify} messages.
+       * @param message SignerInfo message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.tx.ISignerInfo,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a SignerInfo message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns SignerInfo
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.SignerInfo;
+
+      /**
+       * Decodes a SignerInfo message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns SignerInfo
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.SignerInfo;
+    }
+
+    /** Properties of a ModeInfo. */
+    interface IModeInfo {
+      /** ModeInfo single */
+      single?: cosmos.tx.ModeInfo.ISingle | null;
+
+      /** ModeInfo multi */
+      multi?: cosmos.tx.ModeInfo.IMulti | null;
+    }
+
+    /** Represents a ModeInfo. */
+    class ModeInfo implements IModeInfo {
+      /**
+       * Constructs a new ModeInfo.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.IModeInfo);
+
+      /** ModeInfo single. */
+      public single?: cosmos.tx.ModeInfo.ISingle | null;
+
+      /** ModeInfo multi. */
+      public multi?: cosmos.tx.ModeInfo.IMulti | null;
+
+      /** ModeInfo sum. */
+      public sum?: "single" | "multi";
+
+      /**
+       * Creates a new ModeInfo instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns ModeInfo instance
+       */
+      public static create(properties?: cosmos.tx.IModeInfo): cosmos.tx.ModeInfo;
+
+      /**
+       * Encodes the specified ModeInfo message. Does not implicitly {@link cosmos.tx.ModeInfo.verify|verify} messages.
+       * @param m ModeInfo message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.IModeInfo, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified ModeInfo message, length delimited. Does not implicitly {@link cosmos.tx.ModeInfo.verify|verify} messages.
+       * @param message ModeInfo message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: cosmos.tx.IModeInfo,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a ModeInfo message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns ModeInfo
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.ModeInfo;
+
+      /**
+       * Decodes a ModeInfo message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns ModeInfo
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.ModeInfo;
+    }
+
+    namespace ModeInfo {
+      /** Properties of a Single. */
+      interface ISingle {
+        /** Single mode */
+        mode?: cosmos.tx.signing.SignMode | null;
       }
 
-      /** Represents a PublicKey. */
-      class PublicKey implements IPublicKey {
+      /** Represents a Single. */
+      class Single implements ISingle {
         /**
-         * Constructs a new PublicKey.
+         * Constructs a new Single.
          * @param [p] Properties to set
          */
-        constructor(p?: cosmos_sdk.crypto.v1.IPublicKey);
+        constructor(p?: cosmos.tx.ModeInfo.ISingle);
 
-        /** PublicKey secp256k1. */
-        public secp256k1: Uint8Array;
-
-        /** PublicKey ed25519. */
-        public ed25519: Uint8Array;
-
-        /** PublicKey sr25519. */
-        public sr25519: Uint8Array;
-
-        /** PublicKey multisig. */
-        public multisig?: cosmos_sdk.crypto.v1.IPubKeyMultisigThreshold | null;
-
-        /** PublicKey secp256r1. */
-        public secp256r1: Uint8Array;
-
-        /** PublicKey anyPubkey. */
-        public anyPubkey?: google.protobuf.IAny | null;
-
-        /** PublicKey sum. */
-        public sum?: "secp256k1" | "ed25519" | "sr25519" | "multisig" | "secp256r1" | "anyPubkey";
+        /** Single mode. */
+        public mode: cosmos.tx.signing.SignMode;
 
         /**
-         * Creates a new PublicKey instance using the specified properties.
+         * Creates a new Single instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns PublicKey instance
+         * @returns Single instance
          */
-        public static create(properties?: cosmos_sdk.crypto.v1.IPublicKey): cosmos_sdk.crypto.v1.PublicKey;
+        public static create(properties?: cosmos.tx.ModeInfo.ISingle): cosmos.tx.ModeInfo.Single;
 
         /**
-         * Encodes the specified PublicKey message. Does not implicitly {@link cosmos_sdk.crypto.v1.PublicKey.verify|verify} messages.
-         * @param m PublicKey message or plain object to encode
+         * Encodes the specified Single message. Does not implicitly {@link cosmos.tx.ModeInfo.Single.verify|verify} messages.
+         * @param m Single message or plain object to encode
          * @param [w] Writer to encode to
          * @returns Writer
          */
-        public static encode(m: cosmos_sdk.crypto.v1.IPublicKey, w?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(m: cosmos.tx.ModeInfo.ISingle, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a PublicKey message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns PublicKey
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos_sdk.crypto.v1.PublicKey;
-      }
-
-      /** Properties of a PubKeyMultisigThreshold. */
-      interface IPubKeyMultisigThreshold {
-        /** PubKeyMultisigThreshold threshold */
-        threshold?: number | null;
-
-        /** PubKeyMultisigThreshold publicKeys */
-        publicKeys?: cosmos_sdk.crypto.v1.IPublicKey[] | null;
-      }
-
-      /** Represents a PubKeyMultisigThreshold. */
-      class PubKeyMultisigThreshold implements IPubKeyMultisigThreshold {
-        /**
-         * Constructs a new PubKeyMultisigThreshold.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.crypto.v1.IPubKeyMultisigThreshold);
-
-        /** PubKeyMultisigThreshold threshold. */
-        public threshold: number;
-
-        /** PubKeyMultisigThreshold publicKeys. */
-        public publicKeys: cosmos_sdk.crypto.v1.IPublicKey[];
-
-        /**
-         * Creates a new PubKeyMultisigThreshold instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns PubKeyMultisigThreshold instance
-         */
-        public static create(
-          properties?: cosmos_sdk.crypto.v1.IPubKeyMultisigThreshold,
-        ): cosmos_sdk.crypto.v1.PubKeyMultisigThreshold;
-
-        /**
-         * Encodes the specified PubKeyMultisigThreshold message. Does not implicitly {@link cosmos_sdk.crypto.v1.PubKeyMultisigThreshold.verify|verify} messages.
-         * @param m PubKeyMultisigThreshold message or plain object to encode
-         * @param [w] Writer to encode to
+         * Encodes the specified Single message, length delimited. Does not implicitly {@link cosmos.tx.ModeInfo.Single.verify|verify} messages.
+         * @param message Single message or plain object to encode
+         * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(
-          m: cosmos_sdk.crypto.v1.IPubKeyMultisigThreshold,
-          w?: $protobuf.Writer,
+        public static encodeDelimited(
+          message: cosmos.tx.ModeInfo.ISingle,
+          writer?: $protobuf.Writer,
         ): $protobuf.Writer;
 
         /**
-         * Decodes a PubKeyMultisigThreshold message from the specified reader or buffer.
+         * Decodes a Single message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
-         * @returns PubKeyMultisigThreshold
+         * @returns Single
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(
-          r: $protobuf.Reader | Uint8Array,
-          l?: number,
-        ): cosmos_sdk.crypto.v1.PubKeyMultisigThreshold;
-      }
-
-      /** Properties of a MultiSignature. */
-      interface IMultiSignature {
-        /** MultiSignature signatures */
-        signatures?: Uint8Array[] | null;
-      }
-
-      /** Represents a MultiSignature. */
-      class MultiSignature implements IMultiSignature {
-        /**
-         * Constructs a new MultiSignature.
-         * @param [p] Properties to set
-         */
-        constructor(p?: cosmos_sdk.crypto.v1.IMultiSignature);
-
-        /** MultiSignature signatures. */
-        public signatures: Uint8Array[];
+        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.ModeInfo.Single;
 
         /**
-         * Creates a new MultiSignature instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns MultiSignature instance
-         */
-        public static create(
-          properties?: cosmos_sdk.crypto.v1.IMultiSignature,
-        ): cosmos_sdk.crypto.v1.MultiSignature;
-
-        /**
-         * Encodes the specified MultiSignature message. Does not implicitly {@link cosmos_sdk.crypto.v1.MultiSignature.verify|verify} messages.
-         * @param m MultiSignature message or plain object to encode
-         * @param [w] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(m: cosmos_sdk.crypto.v1.IMultiSignature, w?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a MultiSignature message from the specified reader or buffer.
-         * @param r Reader or buffer to decode from
-         * @param [l] Message length if known beforehand
-         * @returns MultiSignature
+         * Decodes a Single message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Single
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(
-          r: $protobuf.Reader | Uint8Array,
-          l?: number,
-        ): cosmos_sdk.crypto.v1.MultiSignature;
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.ModeInfo.Single;
       }
 
-      /** Properties of a CompactBitArray. */
-      interface ICompactBitArray {
-        /** CompactBitArray extraBitsStored */
-        extraBitsStored?: number | null;
+      /** Properties of a Multi. */
+      interface IMulti {
+        /** Multi bitarray */
+        bitarray?: cosmos.crypto.ICompactBitArray | null;
 
-        /** CompactBitArray elems */
-        elems?: Uint8Array | null;
+        /** Multi modeInfos */
+        modeInfos?: cosmos.tx.IModeInfo[] | null;
       }
 
-      /** Represents a CompactBitArray. */
-      class CompactBitArray implements ICompactBitArray {
+      /** Represents a Multi. */
+      class Multi implements IMulti {
         /**
-         * Constructs a new CompactBitArray.
+         * Constructs a new Multi.
          * @param [p] Properties to set
          */
-        constructor(p?: cosmos_sdk.crypto.v1.ICompactBitArray);
+        constructor(p?: cosmos.tx.ModeInfo.IMulti);
 
-        /** CompactBitArray extraBitsStored. */
-        public extraBitsStored: number;
+        /** Multi bitarray. */
+        public bitarray?: cosmos.crypto.ICompactBitArray | null;
 
-        /** CompactBitArray elems. */
-        public elems: Uint8Array;
+        /** Multi modeInfos. */
+        public modeInfos: cosmos.tx.IModeInfo[];
 
         /**
-         * Creates a new CompactBitArray instance using the specified properties.
+         * Creates a new Multi instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns CompactBitArray instance
+         * @returns Multi instance
          */
-        public static create(
-          properties?: cosmos_sdk.crypto.v1.ICompactBitArray,
-        ): cosmos_sdk.crypto.v1.CompactBitArray;
+        public static create(properties?: cosmos.tx.ModeInfo.IMulti): cosmos.tx.ModeInfo.Multi;
 
         /**
-         * Encodes the specified CompactBitArray message. Does not implicitly {@link cosmos_sdk.crypto.v1.CompactBitArray.verify|verify} messages.
-         * @param m CompactBitArray message or plain object to encode
+         * Encodes the specified Multi message. Does not implicitly {@link cosmos.tx.ModeInfo.Multi.verify|verify} messages.
+         * @param m Multi message or plain object to encode
          * @param [w] Writer to encode to
          * @returns Writer
          */
-        public static encode(
-          m: cosmos_sdk.crypto.v1.ICompactBitArray,
-          w?: $protobuf.Writer,
+        public static encode(m: cosmos.tx.ModeInfo.IMulti, w?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified Multi message, length delimited. Does not implicitly {@link cosmos.tx.ModeInfo.Multi.verify|verify} messages.
+         * @param message Multi message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: cosmos.tx.ModeInfo.IMulti,
+          writer?: $protobuf.Writer,
         ): $protobuf.Writer;
 
         /**
-         * Decodes a CompactBitArray message from the specified reader or buffer.
+         * Decodes a Multi message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
-         * @returns CompactBitArray
+         * @returns Multi
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(
-          r: $protobuf.Reader | Uint8Array,
-          l?: number,
-        ): cosmos_sdk.crypto.v1.CompactBitArray;
+        public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.ModeInfo.Multi;
+
+        /**
+         * Decodes a Multi message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Multi
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.ModeInfo.Multi;
+      }
+    }
+
+    /** Properties of a Fee. */
+    interface IFee {
+      /** Fee amount */
+      amount?: cosmos.ICoin[] | null;
+
+      /** Fee gasLimit */
+      gasLimit?: number | Long | null;
+    }
+
+    /** Represents a Fee. */
+    class Fee implements IFee {
+      /**
+       * Constructs a new Fee.
+       * @param [p] Properties to set
+       */
+      constructor(p?: cosmos.tx.IFee);
+
+      /** Fee amount. */
+      public amount: cosmos.ICoin[];
+
+      /** Fee gasLimit. */
+      public gasLimit: number | Long;
+
+      /**
+       * Creates a new Fee instance using the specified properties.
+       * @param [properties] Properties to set
+       * @returns Fee instance
+       */
+      public static create(properties?: cosmos.tx.IFee): cosmos.tx.Fee;
+
+      /**
+       * Encodes the specified Fee message. Does not implicitly {@link cosmos.tx.Fee.verify|verify} messages.
+       * @param m Fee message or plain object to encode
+       * @param [w] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(m: cosmos.tx.IFee, w?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Fee message, length delimited. Does not implicitly {@link cosmos.tx.Fee.verify|verify} messages.
+       * @param message Fee message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: cosmos.tx.IFee, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Fee message from the specified reader or buffer.
+       * @param r Reader or buffer to decode from
+       * @param [l] Message length if known beforehand
+       * @returns Fee
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(r: $protobuf.Reader | Uint8Array, l?: number): cosmos.tx.Fee;
+
+      /**
+       * Decodes a Fee message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Fee
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): cosmos.tx.Fee;
+    }
+
+    /** Namespace signing. */
+    namespace signing {
+      /** SignMode enum. */
+      enum SignMode {
+        SIGN_MODE_UNSPECIFIED = 0,
+        SIGN_MODE_DIRECT = 1,
+        SIGN_MODE_TEXTUAL = 2,
+        SIGN_MODE_LEGACY_AMINO_JSON = 127,
       }
     }
   }
@@ -1602,6 +2076,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IRequest, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Request message, length delimited. Does not implicitly {@link tendermint.abci.types.Request.verify|verify} messages.
+         * @param message Request message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequest,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Request message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1610,6 +2095,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Request;
+
+        /**
+         * Decodes a Request message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Request
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Request;
       }
 
       /** Properties of a RequestEcho. */
@@ -1647,6 +2141,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IRequestEcho, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestEcho message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestEcho.verify|verify} messages.
+         * @param message RequestEcho message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestEcho,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestEcho message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1655,6 +2160,17 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.RequestEcho;
+
+        /**
+         * Decodes a RequestEcho message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestEcho
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
+        ): tendermint.abci.types.RequestEcho;
       }
 
       /** Properties of a RequestFlush. */
@@ -1686,6 +2202,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IRequestFlush, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestFlush message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestFlush.verify|verify} messages.
+         * @param message RequestFlush message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestFlush,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestFlush message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1696,6 +2223,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestFlush;
+
+        /**
+         * Decodes a RequestFlush message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestFlush
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestFlush;
       }
 
@@ -1746,6 +2284,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IRequestInfo, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestInfo message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestInfo.verify|verify} messages.
+         * @param message RequestInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestInfo,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestInfo message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1754,6 +2303,17 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.RequestInfo;
+
+        /**
+         * Decodes a RequestInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
+        ): tendermint.abci.types.RequestInfo;
       }
 
       /** Properties of a RequestSetOption. */
@@ -1800,6 +2360,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestSetOption message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestSetOption.verify|verify} messages.
+         * @param message RequestSetOption message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestSetOption,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestSetOption message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1810,6 +2381,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestSetOption;
+
+        /**
+         * Decodes a RequestSetOption message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestSetOption
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestSetOption;
       }
 
@@ -1875,6 +2457,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestInitChain message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestInitChain.verify|verify} messages.
+         * @param message RequestInitChain message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestInitChain,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestInitChain message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1885,6 +2478,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestInitChain;
+
+        /**
+         * Decodes a RequestInitChain message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestInitChain
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestInitChain;
       }
 
@@ -1941,6 +2545,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IRequestQuery, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestQuery message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestQuery.verify|verify} messages.
+         * @param message RequestQuery message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestQuery,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestQuery message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -1951,6 +2566,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestQuery;
+
+        /**
+         * Decodes a RequestQuery message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestQuery
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestQuery;
       }
 
@@ -2010,6 +2636,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestBeginBlock message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestBeginBlock.verify|verify} messages.
+         * @param message RequestBeginBlock message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestBeginBlock,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestBeginBlock message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2020,6 +2657,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestBeginBlock;
+
+        /**
+         * Decodes a RequestBeginBlock message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestBeginBlock
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestBeginBlock;
       }
 
@@ -2073,6 +2721,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestCheckTx message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestCheckTx.verify|verify} messages.
+         * @param message RequestCheckTx message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestCheckTx,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestCheckTx message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2083,6 +2742,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestCheckTx;
+
+        /**
+         * Decodes a RequestCheckTx message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestCheckTx
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestCheckTx;
       }
 
@@ -2124,6 +2794,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestDeliverTx message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestDeliverTx.verify|verify} messages.
+         * @param message RequestDeliverTx message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestDeliverTx,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestDeliverTx message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2134,6 +2815,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestDeliverTx;
+
+        /**
+         * Decodes a RequestDeliverTx message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestDeliverTx
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestDeliverTx;
       }
 
@@ -2175,6 +2867,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestEndBlock message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestEndBlock.verify|verify} messages.
+         * @param message RequestEndBlock message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestEndBlock,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestEndBlock message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2185,6 +2888,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestEndBlock;
+
+        /**
+         * Decodes a RequestEndBlock message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestEndBlock
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestEndBlock;
       }
 
@@ -2217,6 +2931,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IRequestCommit, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified RequestCommit message, length delimited. Does not implicitly {@link tendermint.abci.types.RequestCommit.verify|verify} messages.
+         * @param message RequestCommit message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IRequestCommit,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a RequestCommit message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2227,6 +2952,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.RequestCommit;
+
+        /**
+         * Decodes a RequestCommit message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RequestCommit
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.RequestCommit;
       }
 
@@ -2344,6 +3080,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IResponse, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Response message, length delimited. Does not implicitly {@link tendermint.abci.types.Response.verify|verify} messages.
+         * @param message Response message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponse,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Response message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2352,6 +3099,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Response;
+
+        /**
+         * Decodes a Response message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Response
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Response;
       }
 
       /** Properties of a ResponseException. */
@@ -2392,6 +3148,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseException message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseException.verify|verify} messages.
+         * @param message ResponseException message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseException,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseException message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2402,6 +3169,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseException;
+
+        /**
+         * Decodes a ResponseException message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseException
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseException;
       }
 
@@ -2440,6 +3218,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IResponseEcho, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseEcho message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseEcho.verify|verify} messages.
+         * @param message ResponseEcho message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseEcho,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseEcho message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2450,6 +3239,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseEcho;
+
+        /**
+         * Decodes a ResponseEcho message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseEcho
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseEcho;
       }
 
@@ -2482,6 +3282,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IResponseFlush, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseFlush message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseFlush.verify|verify} messages.
+         * @param message ResponseFlush message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseFlush,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseFlush message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2492,6 +3303,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseFlush;
+
+        /**
+         * Decodes a ResponseFlush message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseFlush
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseFlush;
       }
 
@@ -2554,6 +3376,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IResponseInfo, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseInfo message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseInfo.verify|verify} messages.
+         * @param message ResponseInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseInfo,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseInfo message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2564,6 +3397,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseInfo;
+
+        /**
+         * Decodes a ResponseInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseInfo;
       }
 
@@ -2617,6 +3461,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseSetOption message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseSetOption.verify|verify} messages.
+         * @param message ResponseSetOption message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseSetOption,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseSetOption message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2627,6 +3482,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseSetOption;
+
+        /**
+         * Decodes a ResponseSetOption message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseSetOption
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseSetOption;
       }
 
@@ -2674,6 +3540,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseInitChain message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseInitChain.verify|verify} messages.
+         * @param message ResponseInitChain message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseInitChain,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseInitChain message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2684,6 +3561,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseInitChain;
+
+        /**
+         * Decodes a ResponseInitChain message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseInitChain
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseInitChain;
       }
 
@@ -2770,6 +3658,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IResponseQuery, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseQuery message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseQuery.verify|verify} messages.
+         * @param message ResponseQuery message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseQuery,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseQuery message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2780,6 +3679,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseQuery;
+
+        /**
+         * Decodes a ResponseQuery message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseQuery
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseQuery;
       }
 
@@ -2821,6 +3731,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseBeginBlock message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseBeginBlock.verify|verify} messages.
+         * @param message ResponseBeginBlock message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseBeginBlock,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseBeginBlock message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2831,6 +3752,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseBeginBlock;
+
+        /**
+         * Decodes a ResponseBeginBlock message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseBeginBlock
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseBeginBlock;
       }
 
@@ -2914,6 +3846,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseCheckTx message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseCheckTx.verify|verify} messages.
+         * @param message ResponseCheckTx message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseCheckTx,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseCheckTx message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -2924,6 +3867,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseCheckTx;
+
+        /**
+         * Decodes a ResponseCheckTx message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseCheckTx
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseCheckTx;
       }
 
@@ -3007,6 +3961,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseDeliverTx message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseDeliverTx.verify|verify} messages.
+         * @param message ResponseDeliverTx message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseDeliverTx,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseDeliverTx message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3017,6 +3982,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseDeliverTx;
+
+        /**
+         * Decodes a ResponseDeliverTx message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseDeliverTx
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseDeliverTx;
       }
 
@@ -3070,6 +4046,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseEndBlock message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseEndBlock.verify|verify} messages.
+         * @param message ResponseEndBlock message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseEndBlock,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseEndBlock message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3080,6 +4067,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseEndBlock;
+
+        /**
+         * Decodes a ResponseEndBlock message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseEndBlock
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseEndBlock;
       }
 
@@ -3121,6 +4119,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ResponseCommit message, length delimited. Does not implicitly {@link tendermint.abci.types.ResponseCommit.verify|verify} messages.
+         * @param message ResponseCommit message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IResponseCommit,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ResponseCommit message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3131,6 +4140,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ResponseCommit;
+
+        /**
+         * Decodes a ResponseCommit message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ResponseCommit
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ResponseCommit;
       }
 
@@ -3184,6 +4204,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ConsensusParams message, length delimited. Does not implicitly {@link tendermint.abci.types.ConsensusParams.verify|verify} messages.
+         * @param message ConsensusParams message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IConsensusParams,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ConsensusParams message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3194,6 +4225,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ConsensusParams;
+
+        /**
+         * Decodes a ConsensusParams message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ConsensusParams
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ConsensusParams;
       }
 
@@ -3238,6 +4280,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IBlockParams, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified BlockParams message, length delimited. Does not implicitly {@link tendermint.abci.types.BlockParams.verify|verify} messages.
+         * @param message BlockParams message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IBlockParams,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a BlockParams message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3246,6 +4299,17 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.BlockParams;
+
+        /**
+         * Decodes a BlockParams message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns BlockParams
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
+        ): tendermint.abci.types.BlockParams;
       }
 
       /** Properties of an EvidenceParams. */
@@ -3292,6 +4356,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified EvidenceParams message, length delimited. Does not implicitly {@link tendermint.abci.types.EvidenceParams.verify|verify} messages.
+         * @param message EvidenceParams message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IEvidenceParams,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes an EvidenceParams message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3302,6 +4377,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.EvidenceParams;
+
+        /**
+         * Decodes an EvidenceParams message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns EvidenceParams
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.EvidenceParams;
       }
 
@@ -3343,6 +4429,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ValidatorParams message, length delimited. Does not implicitly {@link tendermint.abci.types.ValidatorParams.verify|verify} messages.
+         * @param message ValidatorParams message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IValidatorParams,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ValidatorParams message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3353,6 +4450,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ValidatorParams;
+
+        /**
+         * Decodes a ValidatorParams message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ValidatorParams
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ValidatorParams;
       }
 
@@ -3400,6 +4508,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified LastCommitInfo message, length delimited. Does not implicitly {@link tendermint.abci.types.LastCommitInfo.verify|verify} messages.
+         * @param message LastCommitInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.ILastCommitInfo,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a LastCommitInfo message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3410,6 +4529,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.LastCommitInfo;
+
+        /**
+         * Decodes a LastCommitInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns LastCommitInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.LastCommitInfo;
       }
 
@@ -3452,6 +4582,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IEvent, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Event message, length delimited. Does not implicitly {@link tendermint.abci.types.Event.verify|verify} messages.
+         * @param message Event message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IEvent,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes an Event message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3460,6 +4601,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Event;
+
+        /**
+         * Decodes an Event message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Event
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Event;
       }
 
       /** Properties of a Header. */
@@ -3573,6 +4723,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IHeader, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Header message, length delimited. Does not implicitly {@link tendermint.abci.types.Header.verify|verify} messages.
+         * @param message Header message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IHeader,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Header message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3581,6 +4742,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Header;
+
+        /**
+         * Decodes a Header message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Header
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Header;
       }
 
       /** Properties of a Version. */
@@ -3622,6 +4792,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IVersion, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Version message, length delimited. Does not implicitly {@link tendermint.abci.types.Version.verify|verify} messages.
+         * @param message Version message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IVersion,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Version message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3630,6 +4811,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Version;
+
+        /**
+         * Decodes a Version message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Version
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Version;
       }
 
       /** Properties of a BlockID. */
@@ -3671,6 +4861,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IBlockID, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified BlockID message, length delimited. Does not implicitly {@link tendermint.abci.types.BlockID.verify|verify} messages.
+         * @param message BlockID message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IBlockID,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a BlockID message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3679,6 +4880,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.BlockID;
+
+        /**
+         * Decodes a BlockID message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns BlockID
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.BlockID;
       }
 
       /** Properties of a PartSetHeader. */
@@ -3722,6 +4932,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IPartSetHeader, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified PartSetHeader message, length delimited. Does not implicitly {@link tendermint.abci.types.PartSetHeader.verify|verify} messages.
+         * @param message PartSetHeader message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IPartSetHeader,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a PartSetHeader message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3732,6 +4953,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.PartSetHeader;
+
+        /**
+         * Decodes a PartSetHeader message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns PartSetHeader
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.PartSetHeader;
       }
 
@@ -3774,6 +5006,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IValidator, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Validator message, length delimited. Does not implicitly {@link tendermint.abci.types.Validator.verify|verify} messages.
+         * @param message Validator message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IValidator,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Validator message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3782,6 +5025,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Validator;
+
+        /**
+         * Decodes a Validator message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Validator
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Validator;
       }
 
       /** Properties of a ValidatorUpdate. */
@@ -3828,6 +5080,17 @@ export namespace tendermint {
         ): $protobuf.Writer;
 
         /**
+         * Encodes the specified ValidatorUpdate message, length delimited. Does not implicitly {@link tendermint.abci.types.ValidatorUpdate.verify|verify} messages.
+         * @param message ValidatorUpdate message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IValidatorUpdate,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ValidatorUpdate message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3838,6 +5101,17 @@ export namespace tendermint {
         public static decode(
           r: $protobuf.Reader | Uint8Array,
           l?: number,
+        ): tendermint.abci.types.ValidatorUpdate;
+
+        /**
+         * Decodes a ValidatorUpdate message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ValidatorUpdate
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
         ): tendermint.abci.types.ValidatorUpdate;
       }
 
@@ -3880,6 +5154,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IVoteInfo, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified VoteInfo message, length delimited. Does not implicitly {@link tendermint.abci.types.VoteInfo.verify|verify} messages.
+         * @param message VoteInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IVoteInfo,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a VoteInfo message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3888,6 +5173,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.VoteInfo;
+
+        /**
+         * Decodes a VoteInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns VoteInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.VoteInfo;
       }
 
       /** Properties of a PubKey. */
@@ -3929,6 +5223,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IPubKey, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified PubKey message, length delimited. Does not implicitly {@link tendermint.abci.types.PubKey.verify|verify} messages.
+         * @param message PubKey message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IPubKey,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a PubKey message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -3937,6 +5242,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.PubKey;
+
+        /**
+         * Decodes a PubKey message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns PubKey
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.PubKey;
       }
 
       /** Properties of an Evidence. */
@@ -3996,6 +5310,17 @@ export namespace tendermint {
         public static encode(m: tendermint.abci.types.IEvidence, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Evidence message, length delimited. Does not implicitly {@link tendermint.abci.types.Evidence.verify|verify} messages.
+         * @param message Evidence message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.abci.types.IEvidence,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes an Evidence message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -4004,6 +5329,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.abci.types.Evidence;
+
+        /**
+         * Decodes an Evidence message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Evidence
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.abci.types.Evidence;
       }
 
       /** Represents a ABCIApplication */
@@ -4385,6 +5719,17 @@ export namespace tendermint {
         public static encode(m: tendermint.crypto.merkle.IProofOp, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified ProofOp message, length delimited. Does not implicitly {@link tendermint.crypto.merkle.ProofOp.verify|verify} messages.
+         * @param message ProofOp message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.crypto.merkle.IProofOp,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a ProofOp message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -4393,6 +5738,17 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.crypto.merkle.ProofOp;
+
+        /**
+         * Decodes a ProofOp message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ProofOp
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(
+          reader: $protobuf.Reader | Uint8Array,
+        ): tendermint.crypto.merkle.ProofOp;
       }
 
       /** Properties of a Proof. */
@@ -4428,6 +5784,17 @@ export namespace tendermint {
         public static encode(m: tendermint.crypto.merkle.IProof, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Proof message, length delimited. Does not implicitly {@link tendermint.crypto.merkle.Proof.verify|verify} messages.
+         * @param message Proof message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.crypto.merkle.IProof,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Proof message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -4436,6 +5803,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.crypto.merkle.Proof;
+
+        /**
+         * Decodes a Proof message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Proof
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.crypto.merkle.Proof;
       }
     }
   }
@@ -4483,6 +5859,17 @@ export namespace tendermint {
         public static encode(m: tendermint.libs.kv.IPair, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified Pair message, length delimited. Does not implicitly {@link tendermint.libs.kv.Pair.verify|verify} messages.
+         * @param message Pair message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.libs.kv.IPair,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a Pair message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -4491,6 +5878,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.libs.kv.Pair;
+
+        /**
+         * Decodes a Pair message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Pair
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.libs.kv.Pair;
       }
 
       /** Properties of a KI64Pair. */
@@ -4532,6 +5928,17 @@ export namespace tendermint {
         public static encode(m: tendermint.libs.kv.IKI64Pair, w?: $protobuf.Writer): $protobuf.Writer;
 
         /**
+         * Encodes the specified KI64Pair message, length delimited. Does not implicitly {@link tendermint.libs.kv.KI64Pair.verify|verify} messages.
+         * @param message KI64Pair message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(
+          message: tendermint.libs.kv.IKI64Pair,
+          writer?: $protobuf.Writer,
+        ): $protobuf.Writer;
+
+        /**
          * Decodes a KI64Pair message from the specified reader or buffer.
          * @param r Reader or buffer to decode from
          * @param [l] Message length if known beforehand
@@ -4540,6 +5947,15 @@ export namespace tendermint {
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
         public static decode(r: $protobuf.Reader | Uint8Array, l?: number): tendermint.libs.kv.KI64Pair;
+
+        /**
+         * Decodes a KI64Pair message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns KI64Pair
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): tendermint.libs.kv.KI64Pair;
       }
     }
   }
@@ -4588,6 +6004,17 @@ export namespace google {
       public static encode(m: google.protobuf.IAny, w?: $protobuf.Writer): $protobuf.Writer;
 
       /**
+       * Encodes the specified Any message, length delimited. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+       * @param message Any message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: google.protobuf.IAny,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
        * Decodes an Any message from the specified reader or buffer.
        * @param r Reader or buffer to decode from
        * @param [l] Message length if known beforehand
@@ -4596,6 +6023,15 @@ export namespace google {
        * @throws {$protobuf.util.ProtocolError} If required fields are missing
        */
       public static decode(r: $protobuf.Reader | Uint8Array, l?: number): google.protobuf.Any;
+
+      /**
+       * Decodes an Any message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Any
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): google.protobuf.Any;
     }
 
     /** Properties of a Timestamp. */
@@ -4637,6 +6073,17 @@ export namespace google {
       public static encode(m: google.protobuf.ITimestamp, w?: $protobuf.Writer): $protobuf.Writer;
 
       /**
+       * Encodes the specified Timestamp message, length delimited. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
+       * @param message Timestamp message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: google.protobuf.ITimestamp,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
        * Decodes a Timestamp message from the specified reader or buffer.
        * @param r Reader or buffer to decode from
        * @param [l] Message length if known beforehand
@@ -4645,6 +6092,15 @@ export namespace google {
        * @throws {$protobuf.util.ProtocolError} If required fields are missing
        */
       public static decode(r: $protobuf.Reader | Uint8Array, l?: number): google.protobuf.Timestamp;
+
+      /**
+       * Decodes a Timestamp message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Timestamp
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): google.protobuf.Timestamp;
     }
 
     /** Properties of a Duration. */
@@ -4686,6 +6142,17 @@ export namespace google {
       public static encode(m: google.protobuf.IDuration, w?: $protobuf.Writer): $protobuf.Writer;
 
       /**
+       * Encodes the specified Duration message, length delimited. Does not implicitly {@link google.protobuf.Duration.verify|verify} messages.
+       * @param message Duration message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: google.protobuf.IDuration,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
        * Decodes a Duration message from the specified reader or buffer.
        * @param r Reader or buffer to decode from
        * @param [l] Message length if known beforehand
@@ -4694,6 +6161,15 @@ export namespace google {
        * @throws {$protobuf.util.ProtocolError} If required fields are missing
        */
       public static decode(r: $protobuf.Reader | Uint8Array, l?: number): google.protobuf.Duration;
+
+      /**
+       * Decodes a Duration message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Duration
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): google.protobuf.Duration;
     }
   }
 }
